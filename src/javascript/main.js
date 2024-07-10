@@ -172,3 +172,5 @@ document.addEventListener("DOMContentLoaded", function () {
     container.scrollLeft += evt.deltaY;
   });
 });
+var copy = document.querySelector(".logos-slide").cloneNode(true);
+document.querySelector(".logos").appendChild(copy);

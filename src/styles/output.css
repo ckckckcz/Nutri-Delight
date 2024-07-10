@@ -850,3 +850,21 @@ video {
   transform: rotate(3deg);
   z-index: 1;
 }
+.marquee {
+  white-space: nowrap;
+  overflow: hidden;
+  position: relative;
+}
+.marquee-inner {
+  display: inline-block;
+  padding-right: 100%; /* Force next content to the right */
+  animation: marquee 15s linear infinite;
+}
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
