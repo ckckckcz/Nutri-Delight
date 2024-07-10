@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.css" rel="stylesheet" />
+    <link rel="icon" type="image/x-icon" href="../public/Favicon.ico" />
+    <link rel="stylesheet" href="./styles/output.css" />
+    <link rel="stylesheet" href="./styles/index.css" />
+    <title>Nutri Delight ⸺ Penyedia Makanan Sehat</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="fixed top-0 w-full z-50 navbar border border-gray-200 rounded-full shadow dark:bg-gray-800 dark:border-gray-700" style="background-color: white">
+      <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+        <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+          <img src="../public/Logo.png" class="h-10" alt="Nutri Delight Logo" />
+          <span class="self-center text-2xl font-semibold whitespace-nowrap text-gray-900 dark:text-white">Nutri Delight</span>
+        </a>
+        <div class="flex items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+          <button
+            type="button"
+            class="flex text-sm bg-gray-800 rounded-full md:me-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
+            id="user-menu-button"
+            aria-expanded="false"
+            data-dropdown-toggle="user-dropdown"
+            data-dropdown-placement="bottom"
+          >
+            <img class="w-8 h-8 rounded-full" src="../public/profile.png" alt="user photo" />
+          </button>
+          <!-- Dropdown menu -->
+          <div class="z-50 hidden my-4 text-base list-none divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700 dark:divide-gray-600" id="user-dropdown">
+            <div class="px-4 py-3">
+              <span class="block text-sm text-gray-900 dark:text-white">Riovaldo Alfiyan</span>
+              <span class="block text-sm text-gray-500 truncate dark:text-gray-400">rriovld@gmail.com</span>
+            </div>
+            <ul class="py-2" aria-labelledby="user-menu-button">
+              <li>
+                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Dashboard</a>
+              </li>
+              <li>
+                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Settings</a>
+              </li>
+              <li>
+                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Earnings</a>
+              </li>
+              <li>
+                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Sign out</a>
+              </li>
+            </ul>
+          </div>
+          <button
+            type="button"
+            class="flex text-sm bg-gray-800 md:me-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
+            style="border-radius: 9px"
+            id="user-menu-button"
+            aria-expanded="false"
+            data-dropdown-toggle="user-anjay"
+            data-dropdown-placement="bottom"
+          >
+            <svg
+              class="inline-flex items-center p-2 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+              width="40px"
+              height="40px"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 17 14"
+            >
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15" />
+            </svg>
+          </button>
+          <!-- Dropdown menu -->
+          <div class="z-50 hidden my-4 text-base list-none divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700 dark:divide-gray-600" id="user-anjay">
+            <ul class="py-2" aria-labelledby="user-menu-button">
+              <li>
+                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Home</a>
+              </li>
+              <li>
+                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">About</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1">
+          <ul class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0">
+            <li>
+              <a href="#" class="block py-2 px-3 text-green2 rounded md:bg-transparent md:p-0 font-semibold" aria-current="page">Home</a>
+            </li>
+            <li>
+              <a href="#" class="block py-2 px-3 text-gray-900 dark:text-white rounded hover:bg-gray-100 md:hover:bg-transparent hover:text-green2-900 md:p-0 font-semibold">About</a>
+            </li>
+            <li>
+              <a href="#" class="block py-2 px-3 text-gray-900 dark:text-white rounded hover:bg-gray-100 md:hover:bg-transparent hover:text-green2-900 md:p-0 font-semibold">Services</a>
+            </li>
+            <li>
+              <a href="#" class="block py-2 px-3 text-gray-900 dark:text-white rounded hover:bg-gray-100 md:hover:bg-transparent hover:text-green2-900 md:p-0 font-semibold">Pricing</a>
+            </li>
+            <li>
+              <a href="#" class="block py-2 px-3 text-gray-900 dark:text-white rounded hover:bg-gray-100 md:hover:bg-transparent hover:text-green2-900 md:p-0 font-semibold">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Navbar Selesai -->
+    <!-- Jumbotron -->
+    <section style="margin-top: 130px">
+      <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 grid lg:grid-cols-2 gap-8 lg:gap-16">
+        <div class="flex flex-col justify-center">
+          <div
+            class="lg:mb-7 md:mb-5 sm:mb-5 mb-5 sm:text-sm lg:text-sm sm:w-48 inline-flex items-center px-5 py-3 text-sm font-medium text-center text-green-home bg-white badge-nih"
+            style="border-radius: 50px; width: 225px; border: 1px solid #00470f"
+          >
+            Ayo atur pola makan sehat !
+          </div>
+          <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-green-home md:text-5xl lg:text-6xl dark:text-white">Kesehatan Dimulai dari Piring Anda</h1>
+          <p class="mb-8 text-lg font-normal text-gray-500 lg:text-xl dark:text-gray-400">Here at Flowbite we focus on markets where technology, innovation, and capital can unlock long-term value and drive economic growth.</p>
+          <div class="flex flex-col space-y-4 sm:flex-row sm:space-y-0">
+            <a href="#" class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-green-home hover:bg-green-home focus:ring-4">
+              Pesan Makanan
+              <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div>
+          <img class="thumbnail" src="../public/thumbnail 1.png" alt="" />
+        </div>
+      </div>
+    </section>
+    <!-- Jumbotron Selesai -->
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.js"></script>
+    <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
+    <script src="./javascript/main.js"></script>
+  </body>
+</html>
