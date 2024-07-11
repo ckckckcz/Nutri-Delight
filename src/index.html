@@ -11,7 +11,7 @@
   </head>
   <body>
     <!-- Navbar -->
-    <nav class="fixed top-0 w-full z-50 navbar border border-gray-200 rounded-full shadow" style="background-color: white">
+    <nav class="fixed top-0 w-full z-30 navbar border border-gray-200 rounded-full shadow" style="background-color: white">
       <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
           <img src="./images/Logo.png" class="h-10" alt="Nutri Delight Logo" />
@@ -51,36 +51,16 @@
           </div>
           <button
             type="button"
-            class="flex text-sm bg-gray-800 md:me-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
-            style="border-radius: 9px"
-            id="user-menu-button"
+            class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+            aria-controls="mobile-menu"
             aria-expanded="false"
-            data-dropdown-toggle="user-anjay"
-            data-dropdown-placement="bottom"
+            onclick="toggleMobileMenu()"
           >
-            <svg
-              class="inline-flex items-center p-2 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-              width="40px"
-              height="40px"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 17 14"
-            >
+            <span class="sr-only">Open main menu</span>
+            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
               <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15" />
             </svg>
           </button>
-          <!-- Dropdown menu -->
-          <div class="z-50 hidden my-4 text-base list-none divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700 dark:divide-gray-600" id="user-anjay">
-            <ul class="py-2" aria-labelledby="user-menu-button">
-              <li>
-                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Home</a>
-              </li>
-              <li>
-                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">About</a>
-              </li>
-            </ul>
-          </div>
         </div>
         <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1">
           <ul class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0">
@@ -103,7 +83,44 @@
         </div>
       </div>
     </nav>
+    <!-- Overlay -->
+    <div id="overlay" class="overlay"></div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="fixed top-0 right-0 w-64 h-full bg-white shadow-lg hidden slide-in-right">
+      <ul class="mt-20 p-4">
+        <div class="flex justify-between items-center mb-6">
+          <img src="./images/Logo.png" class="w-14 h-14" alt="" />
+          <button
+            type="button"
+            class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+            aria-label="Close"
+            onclick="toggleMobileMenu()"
+          >
+            <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+        <li>
+          <a href="#" class="block py-2 px-3 text-green2 rounded md:bg-transparent md:p-0 font-semibold" aria-current="page">Home</a>
+        </li>
+        <li>
+          <a href="#" class="block py-2 px-3 text-gray-900 dark:text-white rounded hover:bg-gray-100 md:hover:bg-transparent hover:text-green2-900 md:p-0 font-semibold">About</a>
+        </li>
+        <li>
+          <a href="#" class="block py-2 px-3 text-gray-900 dark:text-white rounded hover:bg-gray-100 md:hover:bg-transparent hover:text-green2-900 md:p-0 font-semibold">Services</a>
+        </li>
+        <li>
+          <a href="#" class="block py-2 px-3 text-gray-900 dark:text-white rounded hover:bg-gray-100 md:hover:bg-transparent hover:text-green2-900 md:p-0 font-semibold">Pricing</a>
+        </li>
+        <li>
+          <a href="#" class="block py-2 px-3 text-gray-900 dark:text-white rounded hover:bg-gray-100 md:hover:bg-transparent hover:text-green2-900 md:p-0 font-semibold">Contact</a>
+        </li>
+      </ul>
+    </div>
     <!-- Navbar Selesai -->
+
     <!-- Jumbotron -->
     <section style="margin-top: 130px">
       <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 grid lg:grid-cols-2 gap-8 lg:gap-16">
@@ -342,6 +359,26 @@
           });
         });
       });
+    </script>
+    <script>
+      function toggleMobileMenu() {
+        const menu = document.getElementById("mobile-menu");
+        const overlay = document.getElementById("overlay");
+
+        // Toggle classes for menu and overlay
+        menu.classList.toggle("hidden");
+        menu.classList.toggle("active");
+        overlay.classList.toggle("active");
+
+        // Add animation effect with setTimeout
+        if (menu.classList.contains("active")) {
+          setTimeout(() => {
+            menu.style.transform = "translateX(0)";
+          }, 50); // Delay added for smoother animation
+        } else {
+          menu.style.transform = "translateX(100%)";
+        }
+      }
     </script>
   </body>
 </html>
