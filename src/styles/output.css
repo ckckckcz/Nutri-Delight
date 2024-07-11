@@ -822,6 +822,9 @@ video {
   .thumbnail {
     display: none;
   }
+  div .btn-pesan {
+    width: 180px;
+  }
 }
 .card {
   transition: transform 0.3s;
