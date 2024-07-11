@@ -6555,6 +6555,9 @@ input:checked + .toggle-bg {
   .sm\:w-auto {
     width: auto;
   }
+  .sm\:w-mobile {
+    width: 20px;
+  }
   .sm\:max-w-\[15rem\] {
     max-width: 15rem;
   }
