@@ -965,3 +965,8 @@ video {
   opacity: 1; /* Tampilkan overlay dengan opacity penuh */
   pointer-events: auto; /* Izinkan interaksi dengan overlay */
 }
+
+.foots {
+  max-width: 1250px;
+  text-align: center;
+}
